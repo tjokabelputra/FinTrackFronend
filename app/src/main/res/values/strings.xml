@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Fintrack</string>
+    <string name="AppName">FinTrack</string>
+    <string name="loginTitle">Login</string>
+    <string name="loginDesc">Sign up or log in to record your transactions and gain insight into your spending habits</string>
+    <string name="emailinputtitle">Email</string>
+    <string name="emailhint">Email</string>
+    <string name="email_error">Wrong Email Format</string>
+    <string name="password">Password</string>
+    <string name="passwordHint">Password</string>
+    <string name="login">Log In</string>
+    <string name="noacc">Don\'t Have an Account Yet?</string>
+    <string name="clickhere">Click Here</string>
+    <string name="signup">Signup</string>
+    <string name="username">Username</string>
+    <string name="acc_exist">Already Have an Account?</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fab_add_desc">button to add transaction</string>
+    <string name="datedummy">1 January 1970</string>
+    <string name="settings">Settings</string>
+    <string name="notification">Notification</string>
+    <string name="notificationdesc">Turn on notification to get daily reminder to record your transactions</string>
+    <string name="logout">Log Out Account</string>
+    <string name="logoutbtn">Log Out</string>
+    <string name="category">Category</string>
+    <string name="transaction_name">Transaction Name</string>
+    <string name="transaction_price">Transaction Price</string>
+    <string name="transactions_list">Transactions List</string>
+    <string name="notransaction">No transactions for this day.</string>
+    <string name="summary">Summary</string>
+    <string name="income">Income:</string>
+    <string name="expenses">Expenses:</string>
+    <string name="net_total">Net Total:</string>
+    <string name="income_amount">Income Amount</string>
+    <string name="expenses_amount">Expenses Amount</string>
+    <string name="net_amount">Net Amount</string>
+    <string name="transaction_detail">Transaction Detail</string>
+    <string name="name">Name:</string>
+    <string name="name_content">Name Content</string>
+    <string name="type">Type:</string>
+    <string name="type_content">Type Content</string>
+    <string name="date">Date:</string>
+    <string name="date_content">Date Content</string>
+    <string name="description_content">Description Content</string>
+    <string name="description">Description:</string>
+    <string name="amount_content">Amount Content</string>
+    <string name="amount">Amount:</string>
+    <string name="category_content">Category Content</string>
+    <string name="category2">Category:</string>
+    <string name="delete_transactions">Delete Transactions</string>
+    <string name="tab_income">Income</string>
+    <string name="tab_expenses">Expenses</string>
+    <string name="income2">Income</string>
+    <string name="name2">Name</string>
+    <string name="_30_characters_left">30 Characters Left</string>
+    <string name="date2">Date</string>
+    <string name="characters_left_format">%1$d characters left</string>
+    <string name="select_date">Select Date</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="description2">Description</string>
+    <string name="transaction_description">Transaction Description</string>
+    <string name="write_transaction">Write Transaction</string>
+    <string name="amount2">Amount</string>
+    <string name="transaction_amount">Transaction Amount</string>
+    <string name="monthly_report">Monthly Report</string>
+    <string name="expenses2">Expenses</string>
+    <string name="button_to_return_to_transactions_list">Button to return to transactions list</string>
+
+    <string-array name="income_category">
+        <item>Allowance</item>
+        <item>Salary</item>
+        <item>Bonus</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="expenses_category">
+        <item>Food/Drink</item>
+        <item>Transportation</item>
+        <item>Clothes</item>
+        <item>Beauty</item>
+        <item>Household Needs</item>
+        <item>Bill</item>
+        <item>Entertainment</item>
+        <item>Others</item>
+    </string-array>
+</resources>
