@@ -5,18 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A593F"
+    android:background="?attr/colorPrimary"
     tools:context=".ui.signup.SignupActivity">
 
     <TextView
+        style="@style/TextContent.Main.AppName"
         android:id="@+id/tvAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
         android:text="@string/AppName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,39 +30,35 @@
 
 
         <TextView
+            style="@style/TextContent.Main.Title"
             android:id="@+id/tvSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:text="@string/signup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/TextContent.Main.Desc"
             android:id="@+id/tvSignUpDesc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"
             android:text="@string/loginDesc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
 
         <TextView
+            style="@style/TextContent.Main.Label"
             android:id="@+id/tvUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"
             android:text="@string/username"
             app:layout_constraintStart_toStartOf="@+id/tvSignUpDesc"
             app:layout_constraintTop_toBottomOf="@+id/tvSignUpDesc" />
@@ -79,26 +73,26 @@
             app:layout_constraintEnd_toEndOf="@+id/tvSignUpDesc"
             app:layout_constraintStart_toStartOf="@+id/tvUsername"
             app:layout_constraintTop_toBottomOf="@+id/tvUsername"
-            app:startIconDrawable="@drawable/ic_person">
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="?attr/colorOnSurface">
 
             <com.rpl.fintrack.ui.customview.UsernameEditText
+                style="@style/TextContent.Main.Input"
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_input"
                 android:gravity="center_vertical"
                 android:hint="@string/username"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/black" />
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            style="@style/TextContent.Main.Label"
             android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"
             android:text="@string/emailinputtitle"
             app:layout_constraintStart_toStartOf="@+id/usernameEditTextLayout"
             app:layout_constraintTop_toBottomOf="@+id/usernameEditTextLayout" />
@@ -113,26 +107,27 @@
             app:layout_constraintEnd_toEndOf="@+id/usernameEditTextLayout"
             app:layout_constraintStart_toStartOf="@+id/tvEmail"
             app:layout_constraintTop_toBottomOf="@+id/tvEmail"
-            app:startIconDrawable="@drawable/ic_email">
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="?attr/colorOnSurface">
 
             <com.rpl.fintrack.ui.customview.EmailEditText
+                style="@style/TextContent.Main.Input"
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_input"
                 android:gravity="center_vertical"
                 android:hint="@string/emailhint"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/black" />
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            style="@style/TextContent.Main.Label"
             android:id="@+id/tvLoginPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/password"
-            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/emailEditTextLayout"
             app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
@@ -147,16 +142,18 @@
             app:layout_constraintEnd_toEndOf="@+id/emailEditTextLayout"
             app:layout_constraintStart_toStartOf="@+id/tvLoginPassword"
             app:layout_constraintTop_toBottomOf="@+id/tvLoginPassword"
-            app:startIconDrawable="@drawable/ic_lock">
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="?attr/colorOnSurface"
+            app:endIconTint="?attr/colorOnSurface">
 
             <com.rpl.fintrack.ui.customview.PasswordEditText
+                style="@style/TextContent.Main.Input"
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:background="@drawable/bg_input"
                 android:hint="@string/passwordHint"
-                android:inputType="textPassword"
-                android:textColor="@color/black" />
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -187,6 +184,7 @@
 
 
         <TextView
+            style="@style/TextContent.Main.NoAcc"
             android:id="@+id/tvNoAcc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -194,23 +192,18 @@
             android:layout_marginEnd="8dp"
             android:gravity="end"
             android:text="@string/acc_exist"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/tvClickHere"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <TextView
+            style="@style/TextContent.Main.ClickHere"
             android:id="@+id/tvClickHere"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="start"
             android:text="@string/clickhere"
-            android:textColor="#007BFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintStart_toEndOf="@+id/tvNoAcc"
             app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -220,7 +213,7 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:indeterminateTint="@color/black"
+            android:indeterminateTint="?attr/colorOnSurface"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -231,7 +224,7 @@
         android:id="@+id/statusBarBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#ECE4D4"
+        android:background="?attr/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

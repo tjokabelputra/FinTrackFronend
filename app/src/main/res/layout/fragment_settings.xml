@@ -5,26 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.settings.SettingsFragment"
-    android:background="#D8D4B4">
-
-    <View
-        android:id="@+id/statusBarBackground"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#D8D4B4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="?attr/background">
 
     <TextView
+        style="@style/TextContent.Settings.Title"
         android:id="@+id/tvSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:text="@string/settings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,24 +30,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSettings" />
 
     <TextView
+        style="@style/TextContent.Settings.Name"
         android:id="@+id/tvNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:text="@string/notification"
         app:layout_constraintStart_toStartOf="@+id/view1"
         app:layout_constraintTop_toBottomOf="@+id/view1" />
 
     <TextView
+        style="@style/TextContent.Settings.Desc"
         android:id="@+id/tvNotificationDesc"
         android:layout_width="184dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="14sp"
-        android:textColor="@color/black"
         android:text="@string/notificationdesc"
         app:layout_constraintStart_toStartOf="@+id/tvNotification"
         app:layout_constraintTop_toBottomOf="@+id/tvNotification" />
@@ -74,13 +60,43 @@
         app:layout_constraintStart_toStartOf="@+id/tvNotificationDesc"
         app:layout_constraintTop_toBottomOf="@+id/tvNotificationDesc" />
 
+
     <TextView
-        android:id="@+id/textView4"
+        style="@style/TextContent.Settings.Name"
+        android:id="@+id/tvNightMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/night_mode"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/tvNightModeDesc"
+        style="@style/TextContent.Settings.Desc"
         android:layout_width="184dp"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:text="@string/nightModeDesc"
+        app:layout_constraintStart_toStartOf="@+id/tvNightMode"
+        app:layout_constraintTop_toBottomOf="@+id/tvNightMode" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="#898989"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNotificationDesc"
+        app:layout_constraintTop_toBottomOf="@+id/tvNightModeDesc" />
+
+    <TextView
+        style="@style/TextContent.Settings.Name"
+        android:id="@+id/tvLogOut"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
         android:text="@string/logout"
         app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
         app:layout_constraintStart_toStartOf="@+id/view2"
@@ -91,24 +107,13 @@
         android:layout_width="132dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_btn_logout"
         android:text="@string/logoutbtn"
+        android:textAllCaps="false"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textAllCaps="false"
-        android:background="@drawable/bg_btn_logout"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:backgroundTint="@null"/>
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="#898989"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

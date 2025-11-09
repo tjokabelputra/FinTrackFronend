@@ -7,17 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.list.TransactionsActivity">
 
-    <!-- Fake Status Bar -->
     <View
         android:id="@+id/statusBarBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/dollargreen"
+        android:background="?attr/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Fragment Container (below status bar) -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment_activity_home"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -30,7 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:navGraph="@navigation/bottom_navigation" />
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -45,12 +42,11 @@
         app:itemTextColor="@drawable/btm_selector"
         app:itemActiveIndicatorStyle="@null" />
 
-    <!-- Fake Bottom Bar Background (for gesture nav bar) -->
     <View
         android:id="@+id/bottomBarBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/dollargreen"
+        android:background="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

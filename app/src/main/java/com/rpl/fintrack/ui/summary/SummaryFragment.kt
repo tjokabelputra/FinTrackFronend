@@ -91,14 +91,20 @@ class SummaryFragment : Fragment() {
 
     private fun updateRightArrowVisibility() {
         val current = Calendar.getInstance()
+
+        val maxYear = current.get(Calendar.YEAR)
+        val maxMonth = current.get(Calendar.MONTH) - 1
+
         val displayedYear = calendar.get(Calendar.YEAR)
         val displayedMonth = calendar.get(Calendar.MONTH)
 
-        binding.ivRight.visibility =
-            if (displayedYear < current.get(Calendar.YEAR) ||
-                (displayedYear == current.get(Calendar.YEAR) &&
-                        displayedMonth < current.get(Calendar.MONTH))
-            ) View.VISIBLE else View.GONE
+        val showRightArrow = when {
+            displayedYear < maxYear -> true
+            displayedYear == maxYear && displayedMonth < maxMonth -> true
+            else -> false
+        }
+
+        binding.ivRight.visibility = if (showRightArrow) View.VISIBLE else View.GONE
     }
 
     private fun setupObservers() {
@@ -123,9 +129,19 @@ class SummaryFragment : Fragment() {
         val incomeList = response.income.orEmpty().filterNotNull().reversed()
         val expensesList = response.expenses.orEmpty().filterNotNull().reversed()
         val summaryList = response.total.orEmpty().filterNotNull().reversed()
-        handleIncomeBar(incomeList)
-        handleExpensesBar(expensesList)
-        handleSummaryBar(summaryList)
+
+        val hasData = incomeList.isNotEmpty() || expensesList.isNotEmpty() || summaryList.isNotEmpty()
+
+        if (hasData) {
+            handleIncomeBar(incomeList)
+            handleExpensesBar(expensesList)
+            handleSummaryBar(summaryList)
+        } else {
+            showLoading(false)
+            binding.incomeBar.clear()
+            binding.expensesBar.clear()
+            binding.summaryBar.clear()
+        }
     }
 
     private fun handleIncomeBar(income: List<IncomeItem?>?) {
@@ -262,8 +278,13 @@ class SummaryFragment : Fragment() {
 
     private fun handleSummaryBar(summary: List<TotalItem?>?) {
         val nonNullSummary = summary.orEmpty().filterNotNull()
+
+        // Clear old data and reset
+        val barChart = binding.summaryBar
+        barChart.clear()
+        barChart.invalidate()
+
         if (nonNullSummary.isEmpty()) {
-            binding.summaryBar.clear()
             Toast.makeText(requireContext(), "No summary data available", Toast.LENGTH_SHORT).show()
             return
         }
@@ -295,14 +316,12 @@ class SummaryFragment : Fragment() {
             barWidth = 0.6f
         }
 
-        val barChart = binding.summaryBar
         barChart.data = barData
         barChart.description.isEnabled = false
         barChart.legend.isEnabled = false
         barChart.setDrawGridBackground(false)
         barChart.setDrawBarShadow(false)
         barChart.setFitBars(true)
-
         barChart.axisRight.isEnabled = false
 
         barChart.axisLeft.apply {
@@ -320,15 +339,20 @@ class SummaryFragment : Fragment() {
             textSize = 14f
             setDrawGridLines(false)
             position = com.github.mikephil.charting.components.XAxis.XAxisPosition.BOTTOM
-            axisMinimum = -0.4f
+
+            axisMinimum = -0.5f
+            axisMaximum = nonNullSummary.size.toFloat() - 0.5f
+
             valueFormatter = com.github.mikephil.charting.formatter.IndexAxisValueFormatter(
                 nonNullSummary.map { it.type ?: "Unknown" }
             )
         }
 
-        barChart.setExtraOffsets(40f, 0f, 70f, 0f)
-        barChart.animateX(1200)
+        barChart.setExtraOffsets(0f, 0f, 70f, 0f)
+
+        barChart.notifyDataSetChanged()
         barChart.invalidate()
+        barChart.animateX(1200)
     }
 
 

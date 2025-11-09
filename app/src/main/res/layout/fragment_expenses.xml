@@ -5,31 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8D4B4"
+    android:background="?attr/background"
     tools:context=".ui.write.expenses.ExpensesFragment">
 
     <TextView
+        style="@style/TextContent.Write.Title"
         android:id="@+id/tvExpenses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="@string/expenses2"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        style="@style/TextContent.Write.Label"
         android:id="@+id/tvNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/name2"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvExpenses"
         app:layout_constraintTop_toBottomOf="@+id/tvExpenses" />
 
@@ -46,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNameLabel">
 
         <com.rpl.fintrack.ui.customview.NameEditText
+            style="@style/TextContent.Write.Input"
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -54,33 +51,27 @@
             android:paddingHorizontal="16dp"
             android:hint="@string/transaction_name"
             android:inputType="text"
-            android:textColor="@color/black"
-            android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        style="@style/TextContent.Write.Remainder"
         android:id="@+id/tvNameCharLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/_30_characters_left"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/emailEditTextLayout"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
     <TextView
+        style="@style/TextContent.Write.Label"
         android:id="@+id/tvDateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/date2"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/emailEditTextLayout"
         app:layout_constraintTop_toBottomOf="@+id/tvNameCharLeft" />
 
@@ -98,6 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDateLabel">
 
         <EditText
+            style="@style/TextContent.Write.Input"
             android:id="@+id/dateEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -106,20 +98,16 @@
             android:cursorVisible="false"
             android:inputType="none"
             android:hint="@string/select_date"
-            android:textColor="@color/black"
-            android:textSize="16sp"
             tools:ignore="TextFields" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        style="@style/TextContent.Write.Label"
         android:id="@+id/tvCategoryLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/category"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/dateInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/dateInputLayout" />
 
@@ -136,26 +124,23 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCategoryLabel">
 
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            style="@style/TextContent.Write.Input"
             android:id="@+id/dropdownCategory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg_input"
             android:hint="@string/choose_category"
             android:inputType="none"
-            android:textColor="@color/black"
-            android:textSize="16sp"
             app:simpleItems="@array/expenses_category" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        style="@style/TextContent.Write.Label"
         android:id="@+id/tvAmountLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/amount2"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/categoryInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/categoryInputLayout" />
 
@@ -170,25 +155,23 @@
         app:layout_constraintTop_toBottomOf="@+id/tvAmountLabel">
 
         <EditText
+            style="@style/TextContent.Write.Input"
             android:id="@+id/amountEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg_input"
             android:gravity="center_vertical"
             android:hint="@string/transaction_amount"
-            android:inputType="number"
-            android:textColor="@color/black" />
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        style="@style/TextContent.Write.Label"
         android:id="@+id/tvDescriptionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/description2"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/categoryInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/amountEditTextLayout" />
 
@@ -205,6 +188,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDescriptionLabel">
 
         <com.rpl.fintrack.ui.customview.DescriptionEditText
+            style="@style/TextContent.Write.Input"
             android:id="@+id/descriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -217,21 +201,17 @@
             android:scrollbars="vertical"
             android:maxLines="10"
             android:overScrollMode="ifContentScrolls"
-            android:textColor="@color/black"
-            android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        style="@style/TextContent.Write.Remainder"
         android:id="@+id/tvDescriptionCharLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/_30_characters_left"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/descriptionEditTextLayout"
         app:layout_constraintTop_toBottomOf="@+id/descriptionEditTextLayout" />
 
@@ -254,7 +234,7 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/black"
+        android:indeterminateTint="?attr/colorOnSurface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

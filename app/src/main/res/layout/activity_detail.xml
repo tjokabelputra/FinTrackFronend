@@ -5,18 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECE4D4"
+    android:background="?attr/background"
     tools:context=".ui.detail.DetailActivity">
 
     <TextView
+        style="@style/TextContent.Detail.Title"
         android:id="@+id/tvTransactionDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:text="@string/transaction_detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,144 +31,123 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTransactionDetail">
 
         <TextView
+            style="@style/TextContent.Detail.Label"
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/name"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/TextContent.Detail.Content"
             android:id="@+id/tvNameContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="16dp"
             android:text="@string/name_content"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvName"
             app:layout_constraintTop_toTopOf="@+id/tvName" />
 
         <TextView
+            style="@style/TextContent.Detail.Label"
             android:id="@+id/tvType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/type"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvNameContent" />
 
         <TextView
+            style="@style/TextContent.Detail.Content"
             android:id="@+id/tvTypeContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/type_content"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvType"
             app:layout_constraintStart_toEndOf="@+id/tvType"
             app:layout_constraintTop_toTopOf="@+id/tvType" />
 
         <TextView
+            style="@style/TextContent.Detail.Label"
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/date"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/tvType"
             app:layout_constraintTop_toBottomOf="@+id/tvType" />
 
         <TextView
+            style="@style/TextContent.Detail.Content"
             android:id="@+id/tvDateContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/date_content"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvDate"
             app:layout_constraintStart_toEndOf="@+id/tvDate" />
 
         <TextView
+            style="@style/TextContent.Detail.Label"
             android:id="@+id/tvCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/category2"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/tvDate"
             app:layout_constraintTop_toBottomOf="@+id/tvDate" />
 
         <TextView
+            style="@style/TextContent.Detail.Content"
             android:id="@+id/tvCategoryContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/category_content"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvCategory"
             app:layout_constraintStart_toEndOf="@+id/tvCategory"
             app:layout_constraintTop_toTopOf="@+id/tvCategory" />
 
         <TextView
+            style="@style/TextContent.Detail.Label"
             android:id="@+id/tvAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/amount"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/tvCategory"
             app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
 
         <TextView
+            style="@style/TextContent.Detail.Content"
             android:id="@+id/tvAmountContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/amount_content"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvAmount"
             app:layout_constraintStart_toEndOf="@+id/tvAmount"
             app:layout_constraintTop_toTopOf="@+id/tvAmount" />
 
         <TextView
+            style="@style/TextContent.Detail.Label"
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/description"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/tvAmount"
             app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
 
         <TextView
+            style="@style/TextContent.Detail.Content"
             android:id="@+id/tvDescriptionContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -178,9 +155,6 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:text="@string/description_content"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvDescription"
@@ -219,12 +193,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/dollargreen"
+        android:backgroundTint="?attr/colorPrimary"
         android:clickable="true"
-        android:contentDescription="@string/button_to_return_to_transactions_list"
         android:focusable="true"
         android:src="@drawable/ic_home"
+        android:contentDescription="@string/button_to_return_to_transactions_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
+        app:tint="?attr/colorOnPrimary" />
 </androidx.constraintlayout.widget.ConstraintLayout>

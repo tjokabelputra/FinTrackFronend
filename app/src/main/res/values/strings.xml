@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Fintrack</string>
     <string name="AppName">FinTrack</string>
+
+    //Login Page
     <string name="loginTitle">Login</string>
     <string name="loginDesc">Sign up or log in to record your transactions and gain insight into your spending habits</string>
     <string name="emailinputtitle">Email</string>
@@ -11,10 +13,12 @@
     <string name="login">Log In</string>
     <string name="noacc">Don\'t Have an Account Yet?</string>
     <string name="clickhere">Click Here</string>
+
+    //Sign Up Page
     <string name="signup">Signup</string>
     <string name="username">Username</string>
     <string name="acc_exist">Already Have an Account?</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="fab_add_desc">button to add transaction</string>
     <string name="datedummy">1 January 1970</string>
     <string name="settings">Settings</string>
@@ -65,6 +69,9 @@
     <string name="monthly_report">Monthly Report</string>
     <string name="expenses2">Expenses</string>
     <string name="button_to_return_to_transactions_list">Button to return to transactions list</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="nightModeDesc">Enable dark mode for comfortable viewing on low light</string>
+    <string name="nodata">No data for this month</string>
 
     <string-array name="income_category">
         <item>Allowance</item>

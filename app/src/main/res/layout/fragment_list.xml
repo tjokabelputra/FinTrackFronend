@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.list.ListFragment"
-    android:background="#ECE4D4">
+    android:background="?attr/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -27,14 +27,12 @@
             app:srcCompat="@drawable/ic_left" />
 
         <TextView
+            style="@style/TextContent.List.Date"
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/datedummy"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,27 +52,23 @@
 
 
     <TextView
+        style="@style/TextContent.List.Title"
         android:id="@+id/tvTransactionList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:text="@string/transactions_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <TextView
+        style="@style/TextContent.List.NoList"
         android:id="@+id/tv_empty_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/notransaction"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTransactionList" />
 
     <TextView
+        style="@style/TextContent.List.Title"
         android:id="@+id/tvSummary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -100,9 +95,6 @@
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
         android:text="@string/summary"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/rvTransactionsList"
         app:layout_constraintStart_toStartOf="@+id/rvTransactionsList"
         app:layout_constraintTop_toBottomOf="@+id/rvTransactionsList" />
@@ -118,79 +110,67 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSummary">
 
         <TextView
+            style="@style/TextContent.List.Label"
             android:id="@+id/tvIncome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/income"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/TextContent.List.Label"
             android:id="@+id/tvexpenses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:text="@string/expenses"
             app:layout_constraintStart_toStartOf="@+id/tvIncome"
             app:layout_constraintTop_toBottomOf="@+id/tvIncome" />
 
         <TextView
+            style="@style/TextContent.List.Label"
             android:id="@+id/tvTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="@string/net_total"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvexpenses"
             app:layout_constraintTop_toBottomOf="@+id/tvexpenses" />
 
         <TextView
+            style="@style/TextContent.List.Income"
             android:id="@+id/tvIncomeAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/income_amount"
-            android:textColor="#28A745"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvIncome"
             app:layout_constraintStart_toEndOf="@+id/tvIncome"
             app:layout_constraintTop_toTopOf="@+id/tvIncome" />
 
         <TextView
+            style="@style/TextContent.List.Expense"
             android:id="@+id/tvExpensesAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/expenses_amount"
-            android:textColor="#DC3545"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvexpenses"
             app:layout_constraintStart_toEndOf="@+id/tvexpenses"
             app:layout_constraintTop_toTopOf="@+id/tvexpenses" />
 
         <TextView
+            style="@style/TextContent.List.Net"
             android:id="@+id/tvNetAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/net_amount"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
             app:layout_constraintStart_toEndOf="@+id/tvTotal"
             app:layout_constraintTop_toTopOf="@+id/tvTotal" />
@@ -203,14 +183,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/dollargreen"
+        android:backgroundTint="?attr/colorPrimary"
         android:clickable="true"
-        android:contentDescription="@string/fab_add_desc"
         android:focusable="true"
         android:src="@drawable/ic_add"
+        android:contentDescription="@string/fab_add_desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
+        app:tint="?attr/colorOnPrimary" />
 
     <ProgressBar
         android:id="@+id/pgList"

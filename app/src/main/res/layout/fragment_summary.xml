@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8D4B4"
+    android:background="?attr/background"
     tools:context=".ui.summary.SummaryFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,14 +32,12 @@
                 app:srcCompat="@drawable/ic_left" />
 
             <TextView
+                style="@style/TextContent.Summary.Date"
                 android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="October 2025"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,20 +56,19 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
+            style="@style/TextContent.Summary.Title"
             android:id="@+id/tvMonthlyReport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:text="@string/monthly_report"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <TextView
+            style="@style/TextContent.Summary.Label"
             android:id="@+id/tvIncome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,9 +76,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/income2"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvMonthlyReport" />
@@ -98,14 +92,12 @@
         </com.github.mikephil.charting.charts.HorizontalBarChart>
 
         <TextView
+            style="@style/TextContent.Summary.Label"
             android:id="@+id/tvExpenses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/expenses2"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/incomeBar"
             app:layout_constraintTop_toBottomOf="@+id/incomeBar" />
 
@@ -125,21 +117,19 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:indeterminateTint="@color/black"
+            android:indeterminateTint="?attr/colorOnSurface"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/TextContent.Summary.Label"
             android:id="@+id/tvSummary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/summary"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/expensesBar"
             app:layout_constraintTop_toBottomOf="@+id/expensesBar" />
 
