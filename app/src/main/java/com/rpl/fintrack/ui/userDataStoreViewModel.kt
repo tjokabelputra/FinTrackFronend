@@ -8,6 +8,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class userDataStoreViewModel(private val pref: userPreference) : ViewModel() {
+
+    val user: Flow<User> = pref.getUser()
+
     fun saveUser(uid: String, token: String){
         viewModelScope.launch {
             val user = User(uid, token)
